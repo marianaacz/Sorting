@@ -1,10 +1,7 @@
 // Author:       Mariana Acosta
-// Assignment:       project 6
-// File:       Sorring
-// Instructor:       Reza Sanati
-// Class:       CSIS 2420  Section: 001
 // Date Written:   June 6, 2018
-// Description: get 3 file inputs and sort the files using different methods. Record the time it takes to sort each method and output a table with the files and the time they took to sort 
+// Description: get 3 file inputs and sort the files using different methods. 
+//Record the time it takes to sort each method and output a table with the files and the time they took to sort 
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -17,12 +14,6 @@
 #include <cassert>
 using namespace std;
 
-// Function Name:    insertionSort
-// Purpose:       sort the file using isertion sort type
-// Parameters:     int data[], int n
-// Returns:      none (void)
-// Pre-conditions:   inside the loop if data at i is less than val then swap
-// Post-conditions:none
 void insertionSort(int data[], int n){
     for (int i = 0; i < n; i++){
         int idx = i;
@@ -43,12 +34,6 @@ void insertionSort(int data[], int n){
     }
 }
 
-// Function Name:    shellSort
-// Purpose:       sort the file using shell sort type
-// Parameters:     int data[], int n
-// Returns:      none (void)
-// Pre-conditions:   none
-// Post-conditions:none
 void shellSort(int data[], int n){
     for (int gap = n/2; gap > 0; gap/= 2) {
         for (int i = gap; i < n; i += 1) {
@@ -61,12 +46,6 @@ void shellSort(int data[], int n){
     }
 }
 
-// Function Name:    partition
-// Purpose:       takes the last elemnt and changes it to its correct position by swaping the elemntes 
-// Parameters:     int data[], int n
-// Returns:      i +1
-// Pre-conditions:   none
-// Post-conditions:none
 int partition (int data[], int low, int high)
 {
     int change = data[high];
@@ -82,12 +61,6 @@ int partition (int data[], int low, int high)
     return (i + 1);
 }
 
-// Function Name:    quickSort
-// Purpose:       sort the file using shell sort type
-// Parameters:     int data[], int low, int hight
-// Returns:      none (void)
-// Pre-conditions:   if low lower than high
-// Post-conditions:none
 void quickSort(int data[], int low, int high) {
     if (low < high)
     {
@@ -109,8 +82,7 @@ int main() {
     int i, j, k;
     int *a1, *a2, *a3;
     int temp;
-    int n; //= myArray.size();
-    // int myArray[n];
+    int n; 
     vector<int> v1;
     vector<int> v2;
     vector<int> v3;
